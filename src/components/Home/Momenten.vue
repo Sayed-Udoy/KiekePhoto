@@ -75,10 +75,10 @@ onUnmounted(() => {
 <template>
   <section class="py-10 md:mt-5">
     <div
-      class="container h-full px-2 gap-5 place-items-center md:flex overflow-hidden md:max-h-[800px]"
+      class="container h-full px-2 gap-5 md:gap-0 place-items-center md:flex overflow-hidden md:max-h-[850px]"
     >
       <!-- left side  -->
-      <div class="flex-1">
+      <div class="flex-[1]">
         <div class="py-2">
           <h1
             class="text-[40px] md:text-[46px] lg:text-[54px] leading-[120%] font-newYork"
@@ -92,13 +92,17 @@ onUnmounted(() => {
             emotions, and stories.
           </p>
         </div>
-        <div class="flex w-full gap-8 md:gap-5 mt-5">
-          <div class="flex flex-col gap-6 md:gap-8">
+        <div class="flex w-[100%] gap-5 sm:gap-7 md:gap-5 mt-5">
+          <div class="flex flex-col gap-5 md:gap-6">
             <img class="w-[100%]" :src="img1" alt="" />
             <img class="w-[100%]" :src="img2" alt="" />
           </div>
           <div>
-            <img class="w-[100%]" :src="img3" alt="" />
+            <img
+              class="w-[100%] max-h-[700px] xl:min-w-[340px]"
+              :src="img3"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -118,7 +122,7 @@ onUnmounted(() => {
           <div
             v-for="(item, index) in duplicatedItems"
             :key="index"
-            class="card min-w-[200px] lg:max-w-[390px]"
+            class="card max-w-[300px] min-w-[200px] lg:max-w-[390px]"
           >
             <!-- images -->
             <div>
@@ -160,7 +164,7 @@ onUnmounted(() => {
           <div
             v-for="(item, index) in duplicatedItems2"
             :key="index"
-            class="card py-2 px-2 min-w-[200px] lg:max-w-[390px]"
+            class="card py-2 px-2 max-w-[300px] min-w-[200px] lg:max-w-[390px]"
           >
             <!-- images  -->
             <div>

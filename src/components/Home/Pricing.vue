@@ -47,7 +47,7 @@ import TickCirle from "../../assets/icons/tick-circle.svg";
           </div>
         </div>
         <div
-          class="bg-[#F9F5F4] mt-5 py-8 flex md:items-center px-2 flex-col md:flex-row gap-5"
+          class="bg-[#F9F5F4] mt-5 py-8 flex lg:items-center px-2 flex-col lg:flex-row gap-5"
         >
           <!-- left side  -->
           <div class="flex-[0.8] space-y-3 md:space-y-">

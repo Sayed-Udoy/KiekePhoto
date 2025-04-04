@@ -52,7 +52,11 @@ import i7 from "../../assets/Home/Afsched/i7.png";
         class="hidden w-[100%] sm:grid gap-5 grid-cols-[repeat(3,1fr)] grid-rows-[reapeat(3,1fr)]"
       >
         <div class="col-satrt-1 col-end-2 row-span-2">
-          <img class="w-[100%] max-h-[400px] object-cover" :src="i1" alt="" />
+          <img
+            class="w-[100%] min-h-[400px] max-h-auto object-cover"
+            :src="i1"
+            alt=""
+          />
         </div>
         <div class="text-end row-start-1 row-end-2 col-start-2 col-end-4">
           <h1
@@ -70,7 +74,7 @@ import i7 from "../../assets/Home/Afsched/i7.png";
           </p>
         </div>
         <div class="col-start-[2] col-end-[3] row-start-[2] row-end-[3]">
-          <img class="h-[100%]" :src="i2" alt="" />
+          <img class="h-[100%] w-[100%]" :src="i2" alt="" />
         </div>
         <div class="col-start-[3] col-end-[4] row-start-[2] row-end-[3]">
           <img class="w-[100%] h-[100%]" :src="i5" alt="" />
@@ -79,9 +83,9 @@ import i7 from "../../assets/Home/Afsched/i7.png";
           <img class="h-[100%] w-[100%]" :src="i3" alt="" />
         </div>
         <div class="row-start-3 row-end-4">
-          <img :src="i4" alt="" />
+          <img class="w-[100%]" :src="i4" alt="" />
         </div>
-        <div class="row-start-3 row-end-4">
+        <div class="row-start-3 row-end-4]">
           <img class="h-[100%] w-[100%]" :src="i6" alt="" />
         </div>
       </div>

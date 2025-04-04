@@ -18,13 +18,13 @@ const handleActive = (v: number) => {
       </div>
       <div class="inline-flex items-center space-x-0.5 md:space-x-2">
         <a
-          class="font-[16px] text-nowrap list-unstyled leading-[20.04px] not-first:hidden md:not-first:block font-helvatika cursor-pointer text-black px-4 py-2 hover:bg-[#F9F5F4] hover:border hover:border-black/50 hover:rounded-full hover:px-4 hover:py-2 hover:transition-all hover:duration-300"
+          class="font-[16px] text-nowrap list-unstyled leading-[20.04px] text-[14px] lg:text-[16px] not-first:hidden md:not-first:block font-helvatika cursor-pointer text-black hover:bg-[#F9F5F4] rounded-full px-4 py-2 hover:transition-all hover:duration-300"
           v-for="(item, index) in navItems"
           :key="index"
           @click="handleActive(index)"
           :class="
             active === index
-              ? 'bg-[#F9F5F4] border border-black/50 rounded-full px-4 py-2 transition-all duration-300'
+              ? 'bg-[#F9F5F4] outline outline-black/50 rounded-full px-4 py-2 transition-all duration-300'
               : ''
           "
         >

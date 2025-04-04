@@ -6,12 +6,76 @@ import Love from "../../assets/icons/love.svg";
 import Comment from "../../assets/icons/comment.svg";
 import Plain from "../../assets/icons/plane.svg";
 import Share from "../../assets/icons/share.svg";
-import { cardItems } from "../../data/data.ts";
-import { cardItems2 } from "../../data/data.ts";
+// images for slider
+import i1 from "../../assets/Home/moment/i1.png";
+import i2 from "../../assets/Home/moment/i2.png";
+import i3 from "../../assets/Home/moment/i3.png";
+// import { cardItems } from "../../data/data.ts";
+// import { cardItems2 } from "../../data/data.ts";
+import i4 from "../../assets/Home/moment/i4.png";
+import i5 from "../../assets/Home/moment/i5.png";
+
+// ----------------
+import { ref, onMounted, onUnmounted, computed } from "vue";
+
+const cardItems = ref([
+  {
+    image: i1,
+    views: "100",
+    text: "Light shapes the mood. Shadows create depth. Together, they transform an image into a story....",
+  },
+  {
+    image: i2,
+    views: "200",
+    text: "Light shapes the mood. Shadows create depth. Together, they transform an image into a story....",
+  },
+  {
+    image: i3,
+    views: "500",
+    text: "Light shapes the mood. Shadows create depth. Together, they transform an image into a story....",
+  },
+]);
+const cardItems2 = ref([
+  {
+    image: i4,
+    views: "100",
+    text: "Light shapes the mood. Shadows create depth. Together, they transform an image into a story....",
+  },
+  {
+    image: i5,
+    views: "200",
+    text: "Light shapes the mood. Shadows create depth. Together, they transform an image into a story....",
+  },
+]);
+
+// Duplicate cards to create infinite effect
+const duplicatedItems = computed(() => [
+  ...cardItems.value,
+  ...cardItems.value,
+  ...cardItems.value,
+]);
+const duplicatedItems2 = computed(() => [
+  ...cardItems2.value,
+  ...cardItems2.value,
+]);
+
+const isSmallDevice = ref(window.innerWidth < 768);
+
+const updateDeviceSize = () => {
+  isSmallDevice.value = window.innerWidth < 768;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", updateDeviceSize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateDeviceSize);
+});
 </script>
 
 <template>
-  <section class="py-10">
+  <section class="py-10 md:mt-5">
     <div
       class="container h-full px-2 gap-5 place-items-center md:flex overflow-hidden md:max-h-[800px]"
     >
@@ -23,7 +87,9 @@ import { cardItems2 } from "../../data/data.ts";
           >
             Bijzondere <span class="text-[#2D3B3BB2]">Momenten</span>
           </h1>
-          <p class="text-[14px] lg:text-[20px] text-[#2D3B3BE5] mt-2">
+          <p
+            class="text-[14px] max-w-[500px] lg:text-[20px] text-[#2D3B3BE5] mt-2"
+          >
             A curated collection of breathtaking visuals that capture moments,
             emotions, and stories.
           </p>
@@ -44,21 +110,27 @@ import { cardItems2 } from "../../data/data.ts";
       >
         <!-- card 1  -->
         <div
-          class="grid grid-cols-3 md:flex md:flex-col overflow-x-scroll min-w-[800px] md:min-w-auto"
+          ref="slider"
+          class="flex md:flex-col transition-transform duration-500 ease-in-out"
+          :class="{
+            'animate-horizontal': isSmallDevice,
+            'animate-vertical': !isSmallDevice,
+          }"
         >
           <div
-            v-for="(item, index) in cardItems"
-            class="max-w-[300px] lg:max-w-[350px] min-w-[250px] py-2 px-2"
+            v-for="(item, index) in duplicatedItems"
+            :key="index"
+            class="card"
           >
-            <!-- images  -->
+            <!-- images -->
             <div>
               <img
-                class="w-full min-h-[250px] md:min-w-auto"
+                class="w-full min-h-[250px] max-h-[250px]"
                 :src="item.image"
                 alt=""
               />
             </div>
-            <!-- icons  -->
+            <!-- icons -->
             <div class="flex justify-between py-2 items-center">
               <div class="flex items-center gap-3">
                 <img :src="Love" height="20" width="20" alt="" />
@@ -69,7 +141,7 @@ import { cardItems2 } from "../../data/data.ts";
                 <img :src="Share" height="20" width="20" alt="" />
               </div>
             </div>
-            <!-- views  -->
+            <!-- views -->
             <div>
               <p class="text-[10px]">{{ item.views }} views</p>
               <p class="mt-3 text-[9.32px] md:text-[11.67px] leading-[140%]">
@@ -80,12 +152,17 @@ import { cardItems2 } from "../../data/data.ts";
         </div>
         <!-- card 2  -->
         <div
-          class="grid grid-cols-2 md:flex md:flex-col overflow-x-scroll min-w-[600px] md:min-w-auto"
+          ref="slider"
+          class="flex md:flex-col transition-transform duration-500 ease-in-out"
+          :class="{
+            'animate-horizontal2': isSmallDevice,
+            'animate-vertical2': !isSmallDevice,
+          }"
         >
           <div
-            v-for="(item, index) in cardItems2"
+            v-for="(item, index) in duplicatedItems2"
             :key="index"
-            class="max-w-[270px] lg:max-w-[350px] min-w-[250px] md:min-w-auto py-2 px-2"
+            class="max-w-[270px] card lg:max-w-[350px] min-w-[250px] md:min-w-auto py-2 px-2"
           >
             <!-- images  -->
             <div>

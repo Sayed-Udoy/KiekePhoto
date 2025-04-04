@@ -34,7 +34,7 @@ import i7 from "../../assets/Home/Afsched/i7.png";
               <img class="w-full h-full" :src="i1" alt="" />
             </div>
             <div>
-              <img class="min-h-[180px] w-full" :src="i2" alt="" />
+              <img class="min-h-[240px] w-full" :src="i2" alt="" />
             </div>
           </div>
           <div class="overflow-hidden space-y-2.5 max-w-[300px]">
@@ -42,7 +42,7 @@ import i7 from "../../assets/Home/Afsched/i7.png";
               <img class="w-full object-fit-cover" :src="i7" alt="" />
             </div>
             <div>
-              <img class="w-full h-full" :src="i4" alt="" />
+              <img class="w-full min-h-[260px]" :src="i4" alt="" />
             </div>
           </div>
         </div>

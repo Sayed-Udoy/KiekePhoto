@@ -10,8 +10,6 @@ import Share from "../../assets/icons/share.svg";
 import i1 from "../../assets/Home/moment/i1.png";
 import i2 from "../../assets/Home/moment/i2.png";
 import i3 from "../../assets/Home/moment/i3.png";
-// import { cardItems } from "../../data/data.ts";
-// import { cardItems2 } from "../../data/data.ts";
 import i4 from "../../assets/Home/moment/i4.png";
 import i5 from "../../assets/Home/moment/i5.png";
 
@@ -120,7 +118,7 @@ onUnmounted(() => {
           <div
             v-for="(item, index) in duplicatedItems"
             :key="index"
-            class="card"
+            class="card min-w-[200px] lg:max-w-[390px]"
           >
             <!-- images -->
             <div>
@@ -162,7 +160,7 @@ onUnmounted(() => {
           <div
             v-for="(item, index) in duplicatedItems2"
             :key="index"
-            class="max-w-[270px] card lg:max-w-[350px] min-w-[250px] md:min-w-auto py-2 px-2"
+            class="card py-2 px-2 min-w-[200px] lg:max-w-[390px]"
           >
             <!-- images  -->
             <div>

@@ -5,6 +5,7 @@ import Afsched from "./Afsched.vue";
 import Levensverhalen from "./Levensverhalen.vue";
 import Contactus from "./Contactus.vue";
 import Amanaindahnya from "./Amanaindahnya.vue";
+import Pricing from "./Pricing.vue";
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import Amanaindahnya from "./Amanaindahnya.vue";
     <Levensverhalen />
     <Contactus />
     <Amanaindahnya />
+    <Pricing />
   </div>
 </template>

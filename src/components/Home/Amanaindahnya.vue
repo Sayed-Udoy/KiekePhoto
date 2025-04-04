@@ -15,7 +15,7 @@ import Twitter from "../../assets/icons/Twitter.svg";
       </div>
       <div class="flex-1 px-10">
         <h1
-          class="text-[33px] sm:text-[40px] text-[#2D3B3B] text-nowrap md:text-[48px] lg:text-[54px] leading-[120%] uppercase font-newYork pb-3 lg:pb-10"
+          class="text-[33px] sm:text-[40px] text-[#2D3B3B] md:text-[48px] lg:text-[54px] leading-[120%] uppercase font-newYork pb-3 lg:pb-10"
         >
           AMANA INDAHNYA
         </h1>

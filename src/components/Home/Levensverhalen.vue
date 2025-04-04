@@ -51,18 +51,12 @@ import Uparrow from "../../assets/icons/uparrow.svg";
                 alt=""
               />
               <div>
-                <h1
-                  class="text-[#2D3B3BE5] font-[500] text-[18px] md:text-[24px] leading-[140%] capitalize pt-3"
-                >
-                  The Art of Minimalist Photography: Less is More
-                </h1>
                 <p
                   class="text-[#2D3B3BE5] text-[14px] md:text-[18px] leading-[150%] capitalize py-2"
                 >
-                  Discover how simplicity can enhance storytelling in
-                  photography. This blog explores the power of negative space,
-                  clean compositions, and subtle elegance in creating timeless
-                  images.
+                  A deep dive into the world of high-end photography, where
+                  lighting, composition, and detail transform ordinary moments
+                  into extraordinary works of art.
                 </p>
               </div>
             </div>
@@ -82,14 +76,14 @@ import Uparrow from "../../assets/icons/uparrow.svg";
             <h1
               class="text-[#2D3B3BE5] font-[500] text-[18px] md:text-[24px] leading-[140%] capitalize pt-3"
             >
-              The Art of Minimalist Photography: Less is More
+              Mastering Light: The Secret to Timeless Photography
             </h1>
             <p
               class="text-[#2D3B3BE5] mb-3 text-[14px] md:text-[18px] leading-[150%] capitalize py-2"
             >
-              Discover how simplicity can enhance storytelling in photography.
-              This blog explores the power of negative space, clean
-              compositions, and subtle elegance in creating timeless images.
+              Light is the essence of photography. Learn how to manipulate
+              natural and artificial light to create stunning, high-end visuals
+              that exude sophistication.
             </p>
           </div>
         </div>

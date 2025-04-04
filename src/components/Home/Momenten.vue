@@ -25,7 +25,7 @@ const cardItems = ref([
   {
     image: i2,
     views: "200",
-    text: "Light shapes the mood. Shadows create depth. Together, they transform an image into a story....",
+    text: "Light shapes the mood. Shadows create depth. Together, they transform an image into a story. Here’s a glimpse into the art of lighting perfection. #PhotographyMagic #LightAndShadow #LuxuryVisuals",
   },
   {
     image: i3,
@@ -37,12 +37,12 @@ const cardItems2 = ref([
   {
     image: i4,
     views: "100",
-    text: "Light shapes the mood. Shadows create depth. Together, they transform an image into a story....",
+    text: "Every image is more than just a photo—it’s a masterpiece. From composition to color harmony, luxury photography is about crafting visual poetry. #LuxuryPhotography #FineArt #VisualElegance",
   },
   {
     image: i5,
     views: "200",
-    text: "Light shapes the mood. Shadows create depth. Together, they transform an image into a story....",
+    text: "A portrait isn’t just about capturing a face—it’s about revealing a soul. Every detail, every expression, every emotion carefully framed for timeless impact. #LuxuryPortraits #EleganceInEveryShot #ArtisticVision",
   },
 ]);
 
